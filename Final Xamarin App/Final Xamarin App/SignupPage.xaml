@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Xamarin_App.SignupPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout 
+        Orientation="Vertical" 
+        BackgroundColor="White" 
+        Padding="5">
+        <Label Text="SignUp" 
+               FontSize="35" 
+               FontAttributes="Bold" 
+               FontFamily="Lobster-Regular" 
+               TextColor="#4A148C"
+               HorizontalTextAlignment="Center"/>
+        <Image x:Name="resultImage" 
+               HeightRequest="130" 
+               Source="https://static.vecteezy.com/system/resources/previews/002/640/730/original/default-avatar-placeholder-profile-icon-male-vector.jpg"/>
+        <Button Text="Pick Image" 
+                Clicked="Button_Clicked" 
+                BackgroundColor="LightGray" 
+                CornerRadius="30" 
+                FontAttributes="Bold"/>
+        <StackLayout>
+            <Entry Placeholder="First Name" 
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+            <Entry Placeholder="Last Name" 
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+        </StackLayout>
+        <Entry Placeholder="Email" 
+               Keyboard="Email" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <Entry IsPassword="True" 
+               Placeholder="Password" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <Label Text="DOB" 
+               FontSize="20" 
+               FontAttributes="Bold"/>
+        <DatePicker MinimumDate="01/01/1900" 
+                    MaximumDate="01/01/2020"/>
+        <Picker Title="Select Gender" 
+                TitleColor="Gray">
+            <Picker.Items>
+                <x:String>Male</x:String>
+                <x:String>Female</x:String>
+            </Picker.Items>
+        </Picker>
+        <StackLayout Orientation="Horizontal" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="EndAndExpand">
+            <Button Text="Back" 
+                    CornerRadius="30" 
+                    WidthRequest="190" 
+                    HeightRequest="10" 
+                    TextColor="White"
+                    FontSize="18" 
+                    BackgroundColor="#42A5F5"
+                    Clicked="Back_Button_Clicked"/>
+            <Button Text="SignUp" 
+                    CornerRadius="30" 
+                    WidthRequest="190" 
+                    HeightRequest="50" 
+                    TextColor="White"
+                    FontSize="18" 
+                    BackgroundColor="#42A5F5"
+                    Clicked="SignUp_Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
